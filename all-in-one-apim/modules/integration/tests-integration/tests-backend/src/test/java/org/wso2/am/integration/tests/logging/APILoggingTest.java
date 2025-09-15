@@ -139,7 +139,6 @@ public class APILoggingTest extends APIManagerLifecycleBaseTest {
         // Add additional resources to the existing API
         HttpResponse getAPIResponse = restAPIPublisher.getAPI(apiId);
         APIDTO apidto = new Gson().fromJson(getAPIResponse.getData(), APIDTO.class);
-
         // Get existing operations and add new ones
         List<APIOperationsDTO> operations = apidto.getOperations();
         if (operations == null) {
