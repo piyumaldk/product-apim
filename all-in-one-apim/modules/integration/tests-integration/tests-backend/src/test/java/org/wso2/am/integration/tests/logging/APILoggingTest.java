@@ -325,7 +325,8 @@ public class APILoggingTest extends APIManagerLifecycleBaseTest {
         }
     }
 
-    @Test(groups = {"wso2.am"}, description = "Invoking API with logging enabled with similar templates")
+    @Test(groups = {"wso2.am"}, description = "Invoking API with logging enabled with similar templates: ",
+            dependsOnMethods = "testAPIPerAPIResourceLoggingTestcase")
     public void testSimilarTemplateInvocationWithLoggingTestcase() throws Exception {
         String API_NAME = "SimilarTemplateAPI";
         String API_CONTEXT = "similartemplatetest";
